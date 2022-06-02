@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.firereviewer">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launchericon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launchericon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FireReviewer">
+        <activity
+            android:name=".PDFActivity"
+            android:exported="false" />
+
+        <receiver android:name="com.allyants.notifyme.NotificationPublisher" />
+        <receiver android:name="com.allyants.notifyme.BootNotifyMe">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".CheckProgress"
+            android:exported="false"/>
+        <activity
+            android:name=".ExamResults"
+            android:exported="false" />
+        <activity
+            android:name=".ExamActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Reviewer"
+            android:exported="false"
+            android:parentActivityName=".Reviewer" />
+        <activity
+            android:name=".NavigationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.FireReviewer.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

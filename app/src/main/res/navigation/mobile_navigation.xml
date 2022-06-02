@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.firereviewer.ui.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/about_fragment" />
+    <fragment
+        android:id="@+id/nav_dateofexam"
+        android:name="com.example.firereviewer.ui.dateofexam.DateFragment"
+        android:label="Date of Exam"
+        tools:layout="@layout/date_fragment" />
+    <fragment
+        android:id="@+id/nav_pdfreviewer"
+        android:name="com.example.firereviewer.ui.pdfReviewer.pdfFragment"
+        android:label="PDF Reviewer"
+        tools:layout="@layout/pdf_fragment" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.firereviewer.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_reviewer"
+        android:name="com.example.firereviewer.ui.gallery.GalleryFragment"
+        android:label="Reviewer"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_examsimulator"
+        android:name="com.example.firereviewer.ui.slideshow.SlideshowFragment"
+        android:label="Exam Simulator"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
